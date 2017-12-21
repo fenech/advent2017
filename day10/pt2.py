@@ -34,4 +34,4 @@ sparse_hash = state['string']
 
 dense_hash = (functools.reduce(lambda a, b: a ^ b, sparse_hash[i*16:i*16+16]) for i in range(16))
 
-print("".join(map(lambda x: format(x, 'x').zfill(2), dense_hash)))
+print("".join(map(lambda x: format(x, '02x'), dense_hash)))
